@@ -1,0 +1,373 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- FONT WEIGHTS
+Default: 400
+
+- LINE HEIGHTS
+Default: 1
+
+--- 02 COLORS
+
+- Primary: #228be6
+- Secondary: #212529
+- Tints:
+- Tints:
+- Shades: #77b2e6
+- Shades:#e9e9ea
+- Accents:
+- Accents:
+- Greys: #f1f3f5
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 
+      - Default html(root = parent of all elements) font-size => 16px
+      - Setting html font-size to 10px helps to easily calculate rem
+      - set it as 62.5% === 10px (10/16) => this will ensure user to be able to change their font-size on their screen if they choose to change it
+      */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #212529;
+}
+
+/* ********************************** */
+/* HEADER */
+/* ********************************** */
+
+.header {
+  width: 100%;
+  height: 5.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 4.8rem;
+  background-color: rgba(33, 37, 41, 0.9);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  gap: 4rem;
+}
+
+.btn-mobile-nav {
+  display: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #f1f3f5;
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.6);
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.icon-mobile-nav {
+  color: #fff;
+  font-size: 4.4rem;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* ********************************** */
+/* MAIN */
+/* ********************************** */
+/* ********************************** */
+/* HERO SECTION */
+/* ********************************** */
+
+.section-hero {
+  background: linear-gradient(#228be6, #212529);
+  padding: 9.6rem 0;
+  padding-top: 12.8rem;
+}
+
+.hero {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 1.8rem;
+}
+
+.heading-primary {
+  letter-spacing: -0.7px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  font-size: 9.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fcc419;
+  margin-bottom: 4.8rem;
+}
+
+.hero-text {
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.tech-logos {
+  color: #fff;
+  margin-bottom: 4.8rem;
+  font-size: 3rem;
+}
+
+.hero-img-box {
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.btn--full {
+  margin-right: 9px;
+}
+
+.btn--full,
+.btn--outline {
+  font-size: 2rem;
+  padding-top: 1.2rem;
+  padding-right: 2.4rem;
+}
+
+.hero-btn-icon {
+  font-size: 1.4rem;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #212529;
+  transition: all 0.3s;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.icons {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.icon-link:link,
+.icon-link:visited {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3.6rem;
+  transition: all 0.3s;
+}
+.icon-link:hover,
+.icon-link:active {
+  color: #fff;
+}
+
+/* ********************************** */
+/* ABOUT SECTION */
+/* ********************************** */
+
+.section-about {
+  background: linear-gradient(0deg, #228be6, #212529);
+
+  padding: 9.6rem;
+}
+
+.heading-secondary {
+  color: #fff;
+  font-size: 7.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.subheading {
+  color: #77b2e6;
+  font-size: 2.4rem;
+}
+
+.main-about {
+  grid-column: 1 / -1;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 4.8rem;
+  border-radius: 9px;
+  padding: 4.8rem 6.4rem;
+  box-shadow: inset 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+
+.main-about .heading-tertiary {
+  font-size: 4.4rem;
+  color: #fcc419;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.main-about-text {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.heading-tertiary {
+  color: #fff;
+  font-size: 5.2rem;
+}
+
+.about-title {
+  color: #77b2e6;
+  font-size: 2.4rem;
+  margin-bottom: 4.8rem;
+}
+
+.about-text {
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+/* ********************************** */
+/* CONTACT SECTION */
+/* ********************************** */
+
+.section-contact {
+  background: linear-gradient(#228be6, #212529);
+  padding: 9.6rem 9.6rem;
+  text-align: center;
+}
+
+.contact-box {
+  max-width: 100rem;
+  padding: 4.8rem 6.4rem;
+  margin: 0 auto;
+  border-radius: 9px;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+.contact-box:hover {
+  box-shadow: 0 0 11px 7px rgba(255, 255, 255, 0.4);
+}
+
+.heading-contact {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  font-size: 5.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4.8rem;
+}
+
+.contact-name {
+  font-size: 3.6rem;
+}
+
+.contact-link:link,
+.contact-link:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2.4rem;
+  transition: all 0.3s;
+}
+.contact-link:hover,
+.contact-link:active {
+  color: #fff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 1.3px;
+  border-radius: 3px;
+  border: none;
+}
+
+.btn--submit {
+  border: none;
+  font-family: "Teko", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1.8px;
+}
